@@ -1,0 +1,79 @@
+Write your answers for the following problems inside this text file.
+Please be sure to write in coherent, complete thoughts.
+If we cannot understand your answer, we cannot give you points.
+Use your own words - don't just copy/paste some website.
+
+7. Determine Vertex Property
+
+	In parts 5 and 6, we are exploring the property of edges.
+	These are the connections that a specific vertex has with others.
+	A dead-end only has one edge, or is only connected to one other vertex.
+	A hub has at least 3 edges and is connected to at least 3 other vertices.
+	
+10. Visualize Dungeon
+
+	http://bridges-cs.herokuapp.com/assignments/110/wagnerb
+	This is the URl for the first visualization.
+	
+12. Graph Algorithm Validity
+
+	For the Graph Algorithm Validity, I used a depth first
+	search(DFS). To do this, I created a HashMap<String, boolean>
+	of	all the rooms and set all the values to false;
+	I went through all the connected rooms and set the values
+	to true once they were reached. After I went through all
+	the rooms that were reachable from the starting point,
+	I checked to see if any of the values in the map were
+	still false. If any of them were, it meant that they
+	were not reached and disconnected, making the graph
+	invalid. If all the values were true, it meant that
+	all rooms had been reached and the graph was valid.
+	
+13. Dungeon Difficulty
+
+	http://bridges-cs.herokuapp.com/assignments/113/wagnerb
+	This is the URl for the visualization with difficulty color. 
+
+15. Checking Adjacent Difficulties
+
+	For part 15, I checked if a dungeon was balanced. A
+	balanced dungeon is one that has goes from hard to easy
+	to hard rooms, based on challenge rating. To check if a
+	dungeon is balanced, I used a DFS again, except the
+	operation was a little different. Instead of just checking
+	if the room was visited, I also checked if a room had any
+	connected rooms that were the same difficulty(easy or hard).
+	If any of the rooms were the same, I knew the dungeon was
+	not balanced and returned false. If I got through all the
+	rooms without first returning false, I knew the dungeon
+	was balanced.
+
+17. Visualize Objectives
+
+	http://bridges-cs.herokuapp.com/assignments/117/wagnerb
+	This is the URL for the order of objectives.
+
+19. Visualize Routes
+
+	http://bridges-cs.herokuapp.com/assignments/119/wagnerb
+	Here is the URL for the updated graphs with edges getting
+	thicker as they are used.
+
+20. Calculate Runtime
+
+	My runtime for problem 18 is definitely not the most efficient.
+	When using Dijkstra's Algorithm, I had to add each vertex to each
+	array, so I did that step as many times as there were vertices.
+	Then when an array of the previous vertices are created, I went
+	through each room and every connection. While I went through each
+	room, I checked each room for a minimum distance. Then when I created
+	a string to be printed out by going through all of the objectives. Since the
+	starting point changes each time, I had to reuse Dijkstra's Algorithm
+	for each objective. Therefore, the time complexity of my algorithm
+	from problem 18 is O(R^2 + C + B).
+
+22. Dungeon MST
+
+23. Kruskal's Algorithm
+
+25. Visualize Clusters
