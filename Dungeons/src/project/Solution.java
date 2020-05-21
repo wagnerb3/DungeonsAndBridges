@@ -5,17 +5,13 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
-import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.String;
 import java.text.DecimalFormat;
-import bridges.base.Element;
-import bridges.base.SLelement;
 import bridges.base.GraphAdjListSimple;
 import bridges.base.Edge;
 import bridges.connect.Bridges;
@@ -142,15 +138,15 @@ public class Solution {
 	//Problem 8
 	//Determines Maximum Challenge
 	public int getMax() {
-		int m = 0;
+		int max = 0;
 		Set<String> keys = this.rooms.keySet();
 		for (String s : keys) {
 			int temp = this.rooms.get(s).getChallenge();
-			if (temp > m) {
-				m = temp;
+			if (temp > max) {
+				max = temp;
 			}
 		}
-		return m;
+		return max;
 	}
 
 	//Problem 9
@@ -179,7 +175,7 @@ public class Solution {
 			if (temp.ct == 0) {
 				this.enter = temp.name;
 				graph.getVertex(temp.name).setShape("Star");
-			} else if (temp.obectives.contains("none")) {
+			} else if (!temp.obectives.contains("none")) {
 				graph.getVertex(temp.name).setShape("Triangle");
 			}
 		}
